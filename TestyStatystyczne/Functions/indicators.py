@@ -1,0 +1,21 @@
+from Functions.StatisticsFunctions import *
+
+def position_indicators_scattering(data , nr_p , nr_pop):
+    mean = arithmetic_average(data)
+    print(f"arithmetic_average  {nr_p} for  trials{nr_pop}: {mean}")
+    mediane = median(data)
+    print(f"mediane  trials {nr_p} population {nr_pop}: {mediane}")
+    mode = moda(data)
+    print(f"mode  trials {nr_p} population {nr_pop}: {mode}")
+    range = test_range(data)
+    print(f"test range  trials {nr_p} population {nr_pop}: {range}")
+    variation = variance(data, mean)
+    print(f"variation  trials {nr_p} population {nr_pop}: {variation}")
+    standarddeviation = standard_deviation(variation)
+    print(f"standard deviation  trials {nr_p} population {nr_pop}: {standarddeviation}")
+    kwd = kwartyl_d(data ,mean)
+    print(f"kwd  trials {nr_p} population {nr_pop}: {kwd}")
+    kwu = kwartyl_u(data, mean)
+    print(f"kwu  trials {nr_p} population {nr_pop}: {kwu}")
+    dkw = kwartyl_diffrence(kwd , kwu)
+    print(f"kwartyl diffrenc  trials {nr_p} population {nr_pop}: {dkw}")
